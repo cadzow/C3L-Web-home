@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%; float: right}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 25px;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.col-9 > div {
+    display:none;
+}
+
+.col-9 > div:target{
+    display:block;
+}
+
+html {
+    font-family: "Lucida Sans", sans-serif;
+}
+.header {
+    position:sticky;
+    top:0;
+    width: 100%;
+    border: 1px solid blue;    
+    color: hsl(233, 73%, 22%);
+    padding: 15px;
+}
+.menu ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+.menu li {
+    padding: 0px;
+    margin-bottom: 0px;
+    background-color :cyan;
+    color: #ffffff;
+    box-shadow: 5px 5px 0 0 darkcyan;
+}
+.menu li:hover {
+    background-color :green;
+}
+
+/*Hide dropdown links until they are needed*/
+li ul {
+	display: none;
+    background-color :green;
+}
+
+/*Make dropdown links vertical*/
+li ul li {
+	display: inline;
+	float: none;
+    background-color :green;
+}
+
+/*Display the dropdown on hover*/
+ul li a:hover + .hidden, .hidden:hover {
+	display: block;
+    background-color: darkblue;
+	color: #fff;
+}
+/*Hover state for dropdown links*/
+li:hover ul a:hover {
+	background: darkblue;
+	color: #fff;
+}
+
+li a {
+	display:block;
+	min-width:140px;
+	height: 50px;
+	text-align: center;
+    vertical-align: middle;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: black;
+	background: cyan;
+	text-decoration: none;
+}
+
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: red; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+}
+
+#myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+}
+
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border: 1px solid blue;    
+    color: black;
+    padding: 15px;
+}
